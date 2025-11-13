@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            color: #0F1111;
+        }
+
+        /* Header */
+        header {
+            background-color: #131921;
+            color: white;
+            padding: 8px 20px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #ff9900;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 600px;
+            margin: 0 20px;
+            display: flex;
+        }
+
+        .search-bar select,
+        .search-bar input {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+        }
+
+        .search-bar select {
+            border-radius: 4px 0 0 4px;
+            background-color: #f1f1f1;
+            width: 50px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            border-radius: 0;
+        }
+
+        .search-bar button {
+            background-color: #febd69;
+            border: none;
+            padding: 0 12px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #f3a847;
+        }
+
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            color: #0F1111;
+        }
+  
+        /* Header */
+        header {
+            background-color: #131921;
+            color: white;
+            padding: 8px 20px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #ff9900;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 600px;
+            margin: 0 20px;
+            display: flex;
+        }
+
+        .search-bar select,
+        .search-bar input {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+        }
+
+        .search-bar select {
+            border-radius: 4px 0 0 4px;
+            background-color: #f1f1f1;
+            width: 50px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            border-radius: 0;
+        }
+
+        .search-bar button {
+            background-color: #febd69;
+            border: none;
+            padding: 0 12px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #f3a847;
+        }
+
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        .header-links a:hover {
+            text-decoration: underline;
+        }
+
+        .cart {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .cart-icon {
+            font-size: 28px;
+            margin-right: 5px;
+        }
+
+        /* Main Content */
+        .hero {
+            background: linear-gradient(to right, #232f3e, #131921);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background-color: #ffd814;
+            color: #0F1111;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #fccf02;
+        }
+
+        /* Product Grid */
+        .products {
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #0F1111;
+        }
+
+        .price {
+            color: #B12704;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: #ffa41c;
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart {
+            background-color: #ffd814;
+            color: #0F1111;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .add-to-cart:hover {
+            background-color: #fccf02;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #232f3e;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">amazon<span>.com</span></a>
+            
+            <div class="search-bar">
+                <select>
+                    <option>All</option>
+                    <option>Books</option>
+                    <option>Electronics</option>
+                    <option>Clothing</option>
+                </select>
+                <input type="text" placeholder="Search Amazon">
+                <button>🔍</button>
+            </div>
+
+            <div class="header-links">
+                <a href="#">Hello, Sign in</a>
+                <a href="#">Returns & Orders</a>
+                <a href="#" class="cart">
+                    <span class="cart-icon">🛒</span>
+                    <span>Cart</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Black Friday Deals are Live!</h1>
+        <p>Save up to 70% on electronics, fashion, home goods, and more.</p>
+        <a href="#" class="btn-primary">Shop Now</a>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="products">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Echo+Dot" alt="Echo Dot">
+            <h3>Amazon Echo Dot (5th Gen)</h3>
+            <div class="price">$29.99</div>
+            <div class="rating">★★★★☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Fire+TV+Stick" alt="Fire TV Stick">
+            <h3>Fire TV Stick 4K</h3>
+            <div class="price">$34.99</div>
+            <div class="rating">★★★★★</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Wireless+Earbuds" alt="Wireless Earbuds">
+            <h3>Wireless Bluetooth Earbuds</h3>
+            <div class="price">$24.99</div>
+            <div class="rating">★★★★☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Smart+Watch" alt="Smart Watch">
+            <h3>Fitness Smart Watch</h3>
+            <div class="price">$49.99</div>
+            <div class="rating">★★★★☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Coffee+Maker" alt="Coffee Maker">
+            <h3>12-Cup Coffee Maker</h3>
+            <div class="price">$39.99</div>
+            <div class="rating">★★★★★</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Backpack" alt="Backpack">
+            <h3>Waterproof Laptop Backpack</h3>
+            <div class="price">$32.99</div>
+            <div class="rating">★★★★☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Press Releases</a>
+            <a href="#">Amazon Cares</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Sell on Amazon</a>
+        </div>
+        <div class="copyright">
+            © 1996–2025, Amazon.com, Inc. or its affiliates
+        </div>
+    </footer>
+
+</body>
+</html>
+How to Use:
+Copy the entire code above.
+Paste it into a text editor (like Notepad, VS Code, etc.).
+Save the file as amazon.html.
+Open it in any web browser.
+This is a fully functional static webpage that mimics the look and feel of Amazon's homepage with:
+Logo and navigation
+Search bar
+Hero banner
+Product grid with images, prices, and "Add to Cart" buttons
+Responsive layout (works on mobile and desktop)
+Amazon-style colors and typography
+Note: This is for educational purposes only. It uses placeholder images and does not connect to any real backend or Amazon services.
+        }
+
+        .header-links a:hover {
+            text-decoration: underline;
+        }
+
+        .cart {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .cart-icon {
+            font-size: 28px;
+            margin-right: 5px;
+        }
+
+        /* Main Content */
+        .hero {
+            background: linear-gradient(to right, #232f3e, #131921);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background-color: #ffd814;
+            color: #0F1111;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #fccf02;
+        }
+
+        /* Product Grid */
+        .products {
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #0F1111;
+        }
+
+        .price {
+            color: #B12704;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: #ffa41c;
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart {
+            background-color: #ffd814;
+            color: #0F1111;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .add-to-cart:hover {
+            background-color: #fccf02;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #232f3e;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">amazon<span>.com</span></a>
+            
+            <div class="search-bar">
+                <select>
+                    <option>All</option>
+                    <option>Books</option>
+                    <option>Electronics</option>
+                    <option>Clothing</option>
+                </select>
+                <input type="text" placeholder="Search Amazon">
+                <button>🔍</button>
+            </div>
+
+            <div class="header-links">
+                <a href="#">Hello, Sign in</a>
+                <a href="#">Returns & Orders</a>
+                <a href="#" class="cart">
+                    <span class="cart-icon">🛒</span>
+                    <span>Cart</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Black Friday Deals are Live!</h1>
+        <p>Save up to 70% on electronics, fashion, home goods, and more.</p>
+        <a href="#" class="btn-primary">Shop Now</a>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="products">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Echo+Dot" alt="Echo Dot">
+            <h3>Amazon Echo Dot (5th Gen)</h3>
+            <div class="price">$29.99</div>
+            <div class="rating">★★★★☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Fire+TV+Stick" alt="Fire TV Stick">
+            <h3>Fire TV Stick 4K</h3>
+            <div class="price">$34.99</div>
+            <div class="rating">★★★★★</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Wireless+Earbuds" alt="Wireless Earbuds">
+            <h3>Wireless Bluetooth Earbuds</h3>
+            <div class="price">$24.99</div>
+            <div class="rating">★★★★☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Smart+Watch" alt="Smart Watch">
+            <h3>Fitness Smart Watch</h3>
+            <div class="price">$49.99</div>
+            <div class="rating">★★★★☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Coffee+Maker" alt="Coffee Maker">
+            <h3>12-Cup Coffee Maker</h3>
+            <div class="price">$39.99</div>
+            <div class="rating">★★★★★</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200x180?text=Backpack" alt="Backpack">
+            <h3>Waterproof Laptop Backpack</h3>
+            <div class="price">$32.99</div>
+            <div class="rating">★★★★☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Press Releases</a>
+            <a href="#">Amazon Cares</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Sell on Amazon</a>
+        </div>
+        <div class="copyright">
+            © 1996–2025, Amazon.com, Inc. or its affiliates
+        </div>
+    </footer>
+
+</body>
+</html>
+How to Use:
+Copy the entire code above.
+Paste it into a text editor (like Notepad, VS Code, etc.).
+Save the file as amazon.html.
+Open it in any web browser.
+This is a fully functional static webpage that mimics the look and feel of Amazon's homepage with:
+Logo and navigation
+Search bar
+Hero banner
+Product grid with images, prices, and "Add to Cart" buttons
+Responsive layout (works on mobile and desktop)
+Amazon-style colors and typography
+Note: This is for educational purposes only. It uses placeholder images and does not connect to any real backend or Amazon services.
